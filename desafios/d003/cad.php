@@ -18,6 +18,9 @@
                 return $par;
             }
             echo "<h1><strong>Conversor de Moedas v1.0</strong></h1>";
+            // Biblioteca intl (PHP) - Verificar se está habilitado
+            // $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+            // echo "Seus <strong>".numfmt_create($padrao, $num, "BRL")."</strong> equivalem a <strong>".numfmt_create($padrao, $conv, "USD")."</strong><br>";
             echo "Seus <strong>R\$".format($num)."</strong> equivalem a <strong>US\$".format($conv)."</strong><br>";
             echo "<strong><p>*Cotação fixa de R\$".format($cot)."</strong> informada diretamente no código.</p>";
         ?>
