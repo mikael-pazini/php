@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Moedas v1.0</title>
+    <title>Analisador de Número Real</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Conversor de Moedas v1.0</h1>
+        <h1>Analisador de Número Real</h1>
     </header>
     <section>
         <h2>Informe os dados solicitados</h2>
         <form action="cad.php" method="get">
-            <label for="idnum">Quantos R$ você tem na carteira?</label>
-            <input type="number" name="num" id="idnum" required step="0.01">
-            <input type="submit" value="Converter">
+            <label for="idnum">Número Real: </label>
+            <input type="number" name="num" id="idnum" required step="0.001">
+            <input type="submit" value="Analisar">
         </form>
+        <p><strong>*será aceito apenas números com 3 casas após a virgula</strong></p>
     </section>
 </body>
 </html>
