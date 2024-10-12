@@ -9,8 +9,8 @@
 <body>
     <?php 
         // Capturando os dados do Formulário Retroalimentado
-        $divid = $_GET['dividendo']?? 0;
-        $divis = $_GET['divisor']?? 0;
+        $divid = $_GET['dividendo']?? 1;
+        $divis = $_GET['divisor']?? 1;
 
     ?>
     <main>
@@ -28,8 +28,13 @@
         <h2>Resultado da Operação</h2>
         <?php 
             $div = $divid / $divis;
-            echo "A soma entre os valores ".$divid." e ".$divis." é <strong>igua a $div</strong>.";
+            echo "A divisão entre os valores ".$divid." e ".$divis." é <strong>igua a $div</strong>.<br>";
+            echo "O dividendo é <strong>$divid</strong>.<br>";
+            echo "O divisor é <strong>$divis</strong>.<br>";
+            echo "A divisão inteira é <strong>".(int)$div."</strong>.<br>";
+            echo "O resto da divisão é <strong>".($divid % $divis)."</strong>.<br>";
         ?>
+        
     </section>
 </body>
 </html>
