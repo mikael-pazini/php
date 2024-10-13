@@ -19,9 +19,9 @@
         <h1>Reajustador de Preços</h1>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="preco">Preço do Produto (R$)</label>
-            <input type="number" name="preco" id="preco" required value="<?=$preco?>" step="0.01">
-            <label for="reajuste">Qual será o percentual de reajuste? <?="$reajuste%"?></label>
-            <input type="range" name="reajuste" id="reajuste" required value="<?=$reajuste?>" min="0" max="100">
+            <input type="number" name="preco" id="preco" required value="<?=$preco?>" step="0.01" min="0.10" >
+            <label for="reajuste">Qual será o percentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
+            <input type="range" name="reajuste" id="reajuste" required value="<?=$reajuste?>" min="0" max="100" step="1" oninput="mudaValor()">
 
             <input type="submit" value="Reajustar">
             
@@ -34,7 +34,13 @@
             $pfinal = $preco * (1+($reajuste/100));
             echo "O produto custava R\$".format($preco).", com <strong>$reajuste% de aumento</strong> vai passar a custar <strong>R\$".format($pfinal)."</strong> a partir de agora.";
         ?>
-        
     </section>
+    <script>
+        // Declarações automáticas
+        mudaValor()
+        function mudaValor() {
+            p.innerText = reajuste.value;
+        }
+    </script>
 </body>
 </html>
