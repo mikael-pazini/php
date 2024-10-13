@@ -19,7 +19,7 @@
         <h1>Calculando sua idade</h1>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="anoN">Em que ano você nasceu?</label>
-            <input type="number" name="anoN" id="anoN" required value="<?=$anoN?>" step="1">
+            <input type="number" name="anoN" id="anoN" required value="<?=$anoN?>" step="1" min="1900" max="<?=$anoA?>" >
             <label for="anoD">Quer saber sua idade em que ano? <?="(atualmente estamos em <strong>$anoA</strong>)"?></label>
             <input type="number" name="anoD" id="anoD" required value="<?=$anoD?>" step="1">
 
