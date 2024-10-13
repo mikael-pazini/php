@@ -36,6 +36,17 @@
             $min = intval((($tempo-($sem*$Vsem)-($dia*$Vdia)-($hor*$Vhor))/60));
             $seg = intval((($tempo-($sem*$Vsem)-($dia*$Vdia)-($hor*$Vhor)-($min*$Vmin))/1));
 
+            // $resto = $tempo;
+            // $sem = intval($resto/$Vsem);
+            // $resto = $resto % $Vsem;
+            // $dia = intval($resto/$Vdia);
+            // $resto = $resto % $Vdia;
+            // $hor = intval($resto/$Vhor);
+            // $resto = $resto % $Vhor;
+            // $min = intval($resto/$Vmin);
+            // $resto = $resto % $Vmin;
+            // $seg = $resto;
+
             echo "Analisando o valor que você digitou, <strong>".number_format($tempo,0,",",".")." segundos</strong> equivalem a um total de:";
             echo"<ul><li>$sem semanas</li>";
             echo"<li>$dia dias</li>";
